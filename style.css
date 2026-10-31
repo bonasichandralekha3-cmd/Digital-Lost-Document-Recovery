@@ -1,14 +1,14 @@
 
-/* ==========================================
+/* =====================================
    DIGITAL LOST DOCUMENT RECOVERY SYSTEM
-   RESPONSIVE WEBSITE DESIGN
-========================================== */
+   MODERN WEBSITE DESIGN
+===================================== */
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Arial, sans-serif;
 }
 
 html {
@@ -16,7 +16,7 @@ html {
 }
 
 body {
-    background: #f4f7fb;
+    background: #f4f7fc;
     color: #263445;
     line-height: 1.6;
 }
@@ -24,179 +24,217 @@ body {
 /* HEADER */
 
 header {
-    background: #12345a;
+    background: #102c50;
     color: white;
-    padding: 20px 7%;
+    padding: 18px 7%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     gap: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
 }
 
-header h2 {
+.logo h2 {
     font-size: 23px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
 }
 
 nav {
     display: flex;
+    gap: 28px;
     flex-wrap: wrap;
-    gap: 18px;
 }
 
 nav a {
     color: white;
     text-decoration: none;
     font-size: 15px;
+    font-weight: 600;
     transition: 0.3s;
 }
 
 nav a:hover {
-    color: #65d5e8;
+    color: #62d6ff;
 }
 
 /* HERO SECTION */
 
 .hero {
+    min-height: 440px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding: 100px 20px;
-    background: linear-gradient(135deg, #12345a, #2877a5);
+    padding: 60px 8%;
+    background: linear-gradient(135deg, #12345a, #176b9b, #20a4b8);
     color: white;
 }
 
-.hero h1 {
-    font-size: 38px;
+.hero-content {
+    max-width: 750px;
+}
+
+.hero-content h1 {
+    font-size: 42px;
     margin-bottom: 20px;
-    line-height: 1.3;
+    line-height: 1.2;
 }
 
-.hero p {
-    font-size: 17px;
-    line-height: 1.8;
+.hero-content p {
+    font-size: 18px;
     margin-bottom: 30px;
+    color: #e8f6ff;
 }
 
-.btn {
+.hero-btn {
     display: inline-block;
-    background: #f5b942;
-    color: #172b42;
-    padding: 13px 25px;
+    background: white;
+    color: #12345a;
+    padding: 13px 30px;
+    border-radius: 30px;
     text-decoration: none;
-    border-radius: 6px;
-    font-weight: bold;
+    font-weight: 700;
     transition: 0.3s;
 }
 
-.btn:hover {
-    background: #ffd16d;
-    transform: translateY(-2px);
+.hero-btn:hover {
+    background: #d8f4ff;
+    transform: translateY(-3px);
 }
 
-/* DOCUMENTS SECTION */
+/* DOCUMENT SECTION */
 
-.documents {
+.documents-section {
     padding: 65px 7%;
     text-align: center;
 }
 
-.documents h2,
-#about h2 {
-    font-size: 28px;
-    margin-bottom: 25px;
+.documents-section > h1,
+.about-section h1 {
+    color: #12345a;
+    font-size: 30px;
+    margin-bottom: 12px;
 }
 
-#search {
-    width: 80%;
-    max-width: 500px;
-    padding: 14px;
-    border: 1px solid #ccd5df;
-    border-radius: 7px;
-    font-size: 15px;
+.section-description {
+    color: #65758a;
     margin-bottom: 30px;
+    font-size: 16px;
+}
+
+/* SEARCH BAR */
+
+.search-container {
+    max-width: 600px;
+    margin: 0 auto 40px;
+}
+
+.search-container input {
+    width: 100%;
+    padding: 15px 20px;
+    border: 1px solid #d4deeb;
+    border-radius: 30px;
+    font-size: 15px;
     outline: none;
+    background: white;
+    box-shadow: 0 4px 15px rgba(20, 50, 90, 0.06);
+    transition: 0.3s;
 }
 
-#search:focus {
-    border-color: #2877a5;
-    box-shadow: 0 0 5px rgba(40, 119, 165, 0.3);
+.search-container input:focus {
+    border-color: #1688bd;
+    box-shadow: 0 0 0 3px rgba(22, 136, 189, 0.12);
 }
 
-#document-list {
+/* DOCUMENT CARDS */
+
+.document-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 22px;
 }
 
 .document-card {
     background: white;
-    padding: 25px 15px;
-    border-radius: 10px;
-    box-shadow: 0 3px 12px rgba(0,0,0,0.07);
-    border: 1px solid #e5eaf0;
-    transition: 0.3s;
+    padding: 28px 20px;
+    border-radius: 14px;
+    border: 1px solid #e3eaf3;
+    box-shadow: 0 5px 18px rgba(30, 60, 100, 0.06);
     cursor: pointer;
+    transition: 0.3s;
+    text-align: center;
 }
 
 .document-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 7px 18px rgba(0,0,0,0.12);
-    border-color: #2877a5;
+    transform: translateY(-6px);
+    border-color: #1688bd;
+    box-shadow: 0 12px 25px rgba(30, 80, 130, 0.13);
 }
 
 .document-card h3 {
-    color: #174b78;
-    margin-bottom: 12px;
-}
-
-.document-card p {
-    color: #667587;
-    font-size: 14px;
-}
-
-/* DOCUMENT DETAILS */
-
-#document-details {
-    display: none;
-    background: white;
-    padding: 30px;
-    margin: 30px auto;
-    width: 90%;
-    max-width: 750px;
-    border-radius: 10px;
-    text-align: left;
-    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
-}
-
-#document-details h2 {
-    color: #174b78;
-    margin-bottom: 20px;
-}
-
-#document-details h3 {
-    color: #174b78;
-    margin-top: 22px;
-    margin-bottom: 12px;
-}
-
-#document-details p,
-#document-details li {
-    line-height: 1.8;
+    color: #12345a;
+    font-size: 18px;
     margin-bottom: 10px;
 }
 
-#document-details ul,
-#document-details ol {
+.document-card p {
+    color: #1688bd;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* RECOVERY DETAILS */
+
+.document-details {
+    background: white;
+    margin-top: 40px;
+    padding: 35px;
+    border-radius: 15px;
+    border: 1px solid #e1e9f2;
+    box-shadow: 0 8px 25px rgba(30, 60, 100, 0.08);
+    text-align: left;
+    scroll-margin-top: 25px;
+}
+
+.document-details h2 {
+    color: #12345a;
+    font-size: 25px;
+    margin-bottom: 22px;
+    border-bottom: 2px solid #dcebf5;
+    padding-bottom: 12px;
+}
+
+.document-details h3 {
+    color: #176b9b;
+    font-size: 18px;
+    margin: 22px 0 10px;
+}
+
+.document-details ol,
+.document-details ul {
     padding-left: 25px;
 }
 
-#document-details a {
-    color: #1769aa;
+.document-details li {
+    margin-bottom: 10px;
+    color: #45566b;
+}
+
+.document-details a {
+    color: #087caf;
     text-decoration: none;
+    font-weight: 600;
     overflow-wrap: anywhere;
 }
 
-#document-details a:hover {
+.document-details a:hover {
     text-decoration: underline;
+}
+
+.document-details p {
+    color: #45566b;
 }
 
 /* CLOSE BUTTON */
@@ -205,159 +243,154 @@ nav a:hover {
     background: #12345a;
     color: white;
     border: none;
-    padding: 11px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 20px;
+    padding: 12px 28px;
+    border-radius: 25px;
     font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 25px;
+    transition: 0.3s;
 }
 
 .close-btn:hover {
-    background: #2877a5;
+    background: #176b9b;
 }
 
 /* ABOUT SECTION */
 
-#about {
+.about-section {
+    padding: 60px 10%;
     text-align: center;
-    padding: 55px 20px;
-    background: #e6eef6;
+    background: #eaf3fb;
 }
 
-#about p {
-    max-width: 650px;
-    margin: auto;
-    line-height: 1.8;
+.about-section p {
+    max-width: 850px;
+    margin: 18px auto;
+    color: #52647a;
+    font-size: 16px;
+}
+
+/* DISCLAIMER */
+
+.disclaimer {
+    background: #fff8e8;
+    border-left: 5px solid #e5a52b;
+    margin: 40px 7%;
+    padding: 25px 30px;
+    border-radius: 8px;
+}
+
+.disclaimer h3 {
+    color: #8a5b0a;
+    margin-bottom: 12px;
+    font-size: 21px;
+}
+
+.disclaimer p {
+    color: #685b43;
+    margin-bottom: 9px;
+    font-size: 14px;
 }
 
 /* FOOTER */
 
 footer {
-    background: #12345a;
+    background: #102c50;
     color: white;
     text-align: center;
-    padding: 22px;
+    padding: 25px 15px;
+}
+
+footer p {
+    margin: 6px 0;
     font-size: 14px;
+    color: #dceaf7;
 }
 
-/* TABLET RESPONSIVENESS */
+/* RESPONSIVE DESIGN */
 
-@media (max-width: 900px) {
-
-    header {
-        padding: 20px 5%;
-    }
-
-    .hero h1 {
-        font-size: 32px;
-    }
-
-    .documents {
-        padding: 50px 5%;
-    }
-
-    #document-list {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-/* MOBILE RESPONSIVENESS */
-
-@media (max-width: 600px) {
+@media (max-width: 768px) {
 
     header {
         flex-direction: column;
         text-align: center;
-        padding: 18px 15px;
+        padding: 18px 5%;
     }
 
-    header h2 {
+    .logo h2 {
         font-size: 20px;
     }
 
     nav {
         justify-content: center;
-        gap: 12px;
-    }
-
-    nav a {
-        font-size: 14px;
+        gap: 18px;
     }
 
     .hero {
-        padding: 65px 18px;
+        min-height: 360px;
+        padding: 50px 6%;
     }
 
-    .hero h1 {
-        font-size: 27px;
+    .hero-content h1 {
+        font-size: 30px;
     }
 
-    .hero p {
-        font-size: 15px;
+    .hero-content p {
+        font-size: 16px;
     }
 
-    .documents {
-        padding: 45px 18px;
+    .documents-section {
+        padding: 45px 5%;
     }
 
-    .documents h2,
-    #about h2 {
-        font-size: 24px;
+    .documents-section > h1,
+    .about-section h1 {
+        font-size: 25px;
     }
 
-    #search {
-        width: 100%;
-        font-size: 14px;
-    }
-
-    #document-list {
-        grid-template-columns: 1fr;
-        gap: 15px;
+    .document-list {
+        grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
+        gap: 14px;
     }
 
     .document-card {
-        padding: 22px 15px;
+        padding: 22px 12px;
     }
 
-    #document-details {
-        width: 94%;
-        padding: 20px 16px;
+    .document-card h3 {
+        font-size: 16px;
     }
 
-    #document-details h2 {
-        font-size: 22px;
+    .document-details {
+        padding: 22px 17px;
     }
 
-    #document-details h3 {
-        font-size: 17px;
+    .document-details h2 {
+        font-size: 21px;
     }
 
-    #about {
-        padding: 40px 18px;
+    .about-section {
+        padding: 45px 7%;
     }
 
-    footer {
-        padding: 18px 12px;
+    .disclaimer {
+        margin: 25px 5%;
+        padding: 20px;
     }
 }
 
-/* SMALL MOBILE SCREENS */
+@media (max-width: 400px) {
 
-@media (max-width: 350px) {
+    .document-list {
+        grid-template-columns: 1fr;
+    }
 
-    .hero h1 {
-        font-size: 23px;
+    .hero-content h1 {
+        font-size: 26px;
     }
 
     nav {
-        gap: 9px;
-    }
-
-    nav a {
-        font-size: 12px;
-    }
-
-    #document-details {
-        padding: 15px 12px;
+        gap: 14px;
     }
 }
